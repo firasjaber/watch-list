@@ -6,9 +6,13 @@ function Header({ addShow }) {
   function handleChange(e) {
     setInputValue(e.target.value);
   }
-  function handleAdd(e) {
+  function handleAdd() {
+    //Math.random() return 0..1
+    //Math.random()*100 return 0..100.X
+    //Math.floor() return integer
+    // +1 to avoid 0
     const show = {
-      id: Math.floor(Math.random() * 10000) + 1,
+      id: Math.floor(Math.random() * 100) + 1,
       name: inputValue,
       watched: false,
     };
